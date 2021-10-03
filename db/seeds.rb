@@ -8,8 +8,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Movie.destroy_all
-User.destroy_all
-Rating.destroy_all
+# User.destroy_all
+# Rating.destroy_all
 
 
 puts '🌱 Seeding...'
