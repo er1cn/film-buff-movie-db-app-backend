@@ -8,7 +8,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Movie.destroy_all
-# User.destroy_all
+User.destroy_all
 # Rating.destroy_all
 
 
@@ -222,5 +222,15 @@ m1=Movie.create!(
 
 #Users
 
+u1=User.create!(username:'pumpkins', password_digest: 'ftTv7AJU')
+u2=User.create!(username:'rosecocoa', password_digest: 'vPSJLm2T')
+u3=User.create!(username:'heatham', password_digest: 'kEpdd39T')
+u4=User.create!(username:'golfbeach', password_digest: '5oE9ipFE')
+u5=User.create!(username:'grapeswan', password_digest: 'iPWkD44E')
+u6=User.create!(username:'sodarocky', password_digest: 'Lwku3kvi')
+u7=User.create!(username:'sheeprat', password_digest: 'uetJy9Wr')
+u8=User.create!(username:'cheetah', password_digest: '8okBKusx')
+u9=User.create!(username:'lizardcat', password_digest: 'intm7BcQ')
+u10=User.create!(username:'relishcat', password_digest: '5F4DkueG')
 
 puts '✅ Done seeding!' 
