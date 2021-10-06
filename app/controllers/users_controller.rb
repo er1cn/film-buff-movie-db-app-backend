@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
     def index 
-        users = Users.all
-        render json: users
+        users = User.all
+        render json: UserSerializer.new(users)
     end
 end
