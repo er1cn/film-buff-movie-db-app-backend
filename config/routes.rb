@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :ratings
   resources :users
-  resources :movies, only: [:index, :show]
+  resources :movies, only: [:index, :show, :create,]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
  
 end
