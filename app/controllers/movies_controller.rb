@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
         movie.update(movie_params)
         render json: movie
       else
-        render json: { error : "Movie not found" }, status: :not_found
+        render json: { error: "Movie not found" }, status: :not_found
       end
     end
 
