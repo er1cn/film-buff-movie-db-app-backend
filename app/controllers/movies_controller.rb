@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
         movies = Movie.all
@@ -6,12 +7,8 @@ class MoviesController < ApplicationController
     end
 
     def show
-    movie = Movie.find_by(id: params[:id])
-    if movie
+      movie = find_movie
       render json: MovieSerializer.new(movie) 
-    else
-      render json: { error: "Movie not found" }, status: :not_found
-    end
   end
 
    #POST /movies
@@ -24,31 +21,32 @@ class MoviesController < ApplicationController
     #UPDATE /movies/:id
 
     def update
-      movie = Movie.find_by(id: params[:id])
-      if movie
+      movie = find_movie
         movie.update(movie_params)
         render json: movie
-      else
-        render json: { error: "Movie not found" }, status: :not_found
-      end
     end
 
     #DELETE /movies/:id
 
     def destroy
-      movie = Movie.find_by(id: params[:id])
-      if movie
+      movie = find_movie
         movie.destroy
         head :no_content
-      else
-        render json: { error: "Movie not found" }, status: :not_found
       end
     end
 
 
     private
 
+    def find_movie
+      Movie.find(params[:id])
+    end
+
     def movie_params
       params.permit(:title, :poster, :plot, :genre, :director)
+    end
+
+    def render_not_found_response
+      render json: {error: "Movie not found"}, status: :not_found
     end
 end
