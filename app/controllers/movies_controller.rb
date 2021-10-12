@@ -3,12 +3,12 @@ class MoviesController < ApplicationController
 
     def index
         movies = Movie.all
-        render json: MovieSerializer.new(movies) 
+        render json: movies 
     end
 
     def show
       movie = find_movie
-      render json: MovieSerializer.new(movie) 
+      render json: movie 
   end
 
    #POST /movies
@@ -33,7 +33,7 @@ class MoviesController < ApplicationController
         movie.destroy
         head :no_content
       end
-    end
+    
 
 
     private
