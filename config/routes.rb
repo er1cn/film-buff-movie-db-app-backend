@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  resources :ratings
   resources :users
   resources :movies do
      resources :ratings, only: [:show, :index]
