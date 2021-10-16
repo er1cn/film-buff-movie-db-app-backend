@@ -2,13 +2,13 @@ class RatingsController < ApplicationController
 
     def index
         ratings = Rating.all
-        render json: RatingSerializer.new(ratings)
+        render json: ratings
     end
     
     def show
     rating = Rating.find_by(id: params[:id])
     if rating
-      render json: RatingSerializer.new(rating) 
+      render json: rating
     else
       render json: { error: "Rating not found" }, status: :not_found
     end

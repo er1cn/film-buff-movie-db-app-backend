@@ -14,6 +14,7 @@ gem 'puma', '~> 5.0'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
+gem 'active_model_serializers'
 gem 'dotenv-rails'
 # gem 'fast_jsonapi'
 gem 'rest-client'

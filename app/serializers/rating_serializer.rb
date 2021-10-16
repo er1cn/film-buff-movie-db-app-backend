@@ -1,4 +1,3 @@
-class RatingSerializer
-  include FastJsonapi::ObjectSerializer
+class RatingSerializer < ActiveModel::Serializer
   attributes :rating, :review
 end
