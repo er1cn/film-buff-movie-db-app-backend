@@ -33,7 +33,7 @@ class MoviesController < ApplicationController
         movie.destroy
         head :no_content
       end
-    end
+  
 
 
     private
