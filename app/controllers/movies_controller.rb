@@ -3,12 +3,12 @@ class MoviesController < ApplicationController
 
     def index
         movies = Movie.all
-        render json: movies 
+        render json: movies, include: :rating
     end
 
     def show
       movie = find_movie
-      render json: movie
+      render json: movie, include: :rating
   end
 
    #POST /movies
