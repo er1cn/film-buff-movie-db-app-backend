@@ -28,7 +28,7 @@ m2=Movie.create!(
     director:'J. Gordon Edwards')
 m3=Movie.create!(
     title:'Along Came the Devil 2',
-    poster: 'https://https://www.dvdsreleasedates.com/posters/800/A/Along-Came-the-Devil-2-2019-movie-poster.jpg',
+    poster: 'https://www.dvdsreleasedates.com/posters/800/A/Along-Came-the-Devil-2-2019-movie-poster.jpg',
     plot:'After receiving an unsettling voicemail, Jordan (Wiggins) returns home, looking for answers, only to find her estranged father and even more questions. A demonic force has attached itself ...', 
     genre:'Horror, Thriller', 
     director:'Jason DeVan')
